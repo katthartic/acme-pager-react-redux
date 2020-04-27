@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: lavender 3px solid;
+}
+
+thead {
+  background-color: lavender;
+  display: table-header-group;
+  vertical-align: middle;
+}
