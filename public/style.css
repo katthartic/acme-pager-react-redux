@@ -44,3 +44,27 @@ td {
   text-align: left;
   width: 200px;
 }
+
+a {
+  text-decoration: none;
+  border-radius: 50%;
+  color: black;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  text-align: center;
+}
+
+nav {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 600px;
+  border: 3px lavender solid;
+  border-radius: 1em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.selected {
+  background-color: lavender;
+}

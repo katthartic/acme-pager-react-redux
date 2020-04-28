@@ -16,7 +16,7 @@ const loadEmployees = (page) => async (dispatch) => {
 }
 
 //reducers
-const employeesReducer = (state = [], action) => {
+const employeesReducer = (state = {}, action) => {
   switch (action.type) {
     case LOADED_EMPLOYEES:
       return action.employees

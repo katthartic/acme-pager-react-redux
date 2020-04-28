@@ -7,9 +7,14 @@ class Table extends Component {
     const page = this.props.match.params.page
     this.props.load(page)
   }
+  componentDidUpdate(prevProps) {
+    const page = this.props.match.params.page
+    if (prevProps.match.params.page !== page) {
+      this.props.load(page)
+    }
+  }
 
   render() {
-    console.log(this.props.employees)
     const employees = this.props.employees.rows || []
     return (
       <div id="table-container">
