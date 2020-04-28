@@ -15,7 +15,7 @@ class Table extends Component {
   }
 
   render() {
-    const employees = this.props.employees.rows || []
+    const employees = this.props.employees || []
     return (
       <div id="table-container">
         <table className="fixed_header">
@@ -44,7 +44,7 @@ class Table extends Component {
 }
 
 const mapStateToProps = ({ employees }) => ({
-  employees,
+  employees: employees.rows,
 })
 
 const mapDispatchToProps = (dispatch) => {

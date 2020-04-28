@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
@@ -31,7 +31,7 @@ const Pager = ({ match, employees }) => {
   )
 }
 
-const mapStateToProps = (state) => state
+const mapStateToProps = (employees) => employees
 
 const mapDispatchToProps = null
 
