@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { loadEmployees } from '../store'
 
 class Table extends Component {
   constructor() {
@@ -7,6 +8,11 @@ class Table extends Component {
     this.state = {
       headers: [],
     }
+  }
+
+  componentDidMount() {
+    const page = this.props.match.params.page
+    this.props.load(page)
   }
 
   render() {
@@ -25,3 +31,16 @@ class Table extends Component {
     )
   }
 }
+
+const mapStateToProps = null
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    load: (page) => {
+      console.log('loading data')
+      dispatch(loadEmployees(page))
+    },
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Table)
